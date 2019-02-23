@@ -1,0 +1,13 @@
+{
+  "require": {
+    "grpc/grpc": "v1.12.0",
+    "google/protobuf": "^3.3.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Common\\": "src/Services/Common",
+      "Users\\": "src/Services/Users",
+      "GPBMetadata\\": "src/Services/GPBMetadata"
+    }
+  }
+}

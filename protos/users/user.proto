@@ -1,0 +1,25 @@
+syntax = "proto3";
+
+import "common/page.proto";
+import "users/addr.proto";
+
+package users;
+
+message User {
+    int32 Id = 1;
+    string Name = 2;
+    repeated Addr addresses = 3;
+}
+
+service Users {
+    rpc Lists (UserListsReq) returns (UserListsResp) {
+    }
+}
+
+message UserListsReq {
+    common.Page page = 1;
+}
+
+message UserListsResp {
+    repeated User users = 1;
+}
